@@ -1,15 +1,15 @@
-let points = new Array(
-        new Array("home","guest"),
-        new Array(0,0)
-        )
+let game = {
+        teams: ["home","guest"],
+        points: [0,0]
+}
 
 function addPoints(team,i){
-    points[1][team]+=i
-    document.getElementById(points[0][team]).textContent = points[1][team] 
+    game.points[team]+=i
+    document.getElementById(game.teams[team]).textContent = game.points[team] 
 }
 function newGame(){
-    points[1][0] = 0
-    points[1][1] = 0
-    document.getElementById(points[0][0]).textContent = points[1][0] 
-    document.getElementById(points[0][1]).textContent = points[1][1] 
+    game.points[0] = 0
+    game.points[1] = 0
+    document.getElementById(game.teams[0]).textContent = 0
+    document.getElementById(game.teams[1]).textContent = 0 
 }
